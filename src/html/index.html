@@ -10,237 +10,72 @@
      <link rel="stylesheet" href="/src/css/style.css"> 
     <!-- font-awosome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="module" src="/src/js/app.js" defer ></script>
 </head>
 <body>
-    <!-- container -->
      <div class="container flex">
-     <!-- header -->
     <header class="header">
         <h1 class="heder-title" ><i class="custom-i fa-brands fa-github"></i> GitHup User Finder</h1>
     <p class="label">Search for any GitHub user to see profile and repositories</p> 
     </header>  
-     <!--  end header  -->
-     
-     <!-- main -->
      <main >
-     <!-- search  -->
-    <form class="search flex">
-        <input id="input-search" class="input-search" aria-label="Search GitHub username" type="text" placeholder="search...">
-        <button id= "btn-search" class="btn btn-search">Search</button>
+    <form id = "form-id" class="search flex">
+        <input id="input-search" class="input-search" aria-label="Search GitHub username" type="text" placeholder="search..." required>
+        <button type="submit" id= "btn-search" class="btn btn-search">Search</button>
     </form>
-     <!-- end search -->
-
-     <!-- user card -->
-     <section class="user-card flex">
-
-        <!-- top info -->
+     <section  class="user-card flex">
 <section class="user-info grid">
-
-    <!-- avatar -->
-     <div class="user-avator inline-flex">
-         <img class="avator" src="/Presentations/mine.jpg" alt="User Avatar" loading="lazy">
-     </div>
-
-       <!-- Details -->
+  <div class="user-avator inline-flex">
+         <img id="img-profile" class="avator"  alt="prfile" loading="lazy">
+     <span class="avatar-fallback hide">Not found</span>
+        </div>
       <div class="user-details flex">
-        <h2 class="user-name">Burak</h2>
-        <p class="user-username">@burakorkmez</p>
-        <p class="user-bio">formerly As a Programmer</p>
-
+        <h2 id="name" class="user-name">Burak</h2>
+        <p  id="username" class="user-username">@burakorkmez</p>
+        <p  id="user-bio" class="user-bio">formerly As a Programmer</p>
         <div class="user-meta inline-flex">
-          <span ><i class="custom-i fa-solid fa-location-dot"></i> Not specified</span>
-          <span ><i class="custom-i fa-regular fa-calendar-days"></i> Joined Dec 1, 2020</span>
+          <span id="location"><i class="custom-i fa-solid fa-location-dot"></i> Not specified</span>
+          <span  id="joined"><i class="custom-i fa-regular fa-calendar-days"></i> Joined Dec 1, 2020</span>
         </div>
         <a href="#" class="btn view-profile">View Profile</a>
         </div>
     </section>
-
-    <!-- stats -->
-
     <section class="stats grid">
     <div class="item flex">
         <i class="custom-i fa-solid fa-users"></i>
-        <span class="label">2075 follwers</span>
+        <span id="followers" class="label">2075 follwers</span>
     </div>
     <div class="item flex">
         <i class="custom-i fa-solid fa-user-group"></i>
-        <span class="label">22 following</span>
+        <span id="following" class="label">22 following</span>
     </div>
     <div class="item flex">
         <i class="custom-i fa-solid fa-code-branch"></i>
-        <span class="label">40 repositories</span>
+        <span id="count-repo" class="label">40 repositories</span>
     </div>
-    </section>
-    <!-- end stats -->
-    <hr>
-
-    <!-- socail -->
-        <section class="social grid">
+    </section><hr>
+    <section class="social grid">
     <div class="item flex">
         <i class="custom-i fa-solid fa-building"></i>
-        <span class="label">2075 follwers</span>
+        <span id="company" class="label">not specified</span>
     </div>
     <div class="item flex">
         <i class="custom-i fa-solid fa-link"></i>
-        <span class="label">22 following</span>
+        <span id="link" class="label">link</span>
     </div>
     <div class="item flex">
         <i class="custom-i fa-brands fa-twitter"></i>
-        <span class="label">40 repositories</span>
+        <span id="twiter" class="label">twiter account</span>
     </div>
     </section>
-<!-- end social -->
-
-<section class="repos">
+<section id="repos" class="repos">
 <header class="header-repo">
 <h2 class="title">Last Repositories</h2>
 </header>
 <hr>
-<section class="grid">
-<article class="repo flex">
-<div class="flex">
-        <i class="custom-i fa-solid fa-code-branch"></i>
-        <span class="label">40 repositories</span>
-</div>
-<p class="text">No description available</p>
-<div class="skills flex">
-<!-- programming language -->
-    <div class="skill flex">
- <i class="custom-i fa-solid fa-circle"></i>   
- <span class="label">JavaSecript</span>
-</div>
-
-<!-- stars -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-star"></i>   
-<span class="label">2</span>
-</div>
-
-<!-- branch -->
-<div class="skill flex">
-    <i class="custom-i fa-solid fa-code-fork"></i>
-<span class="label">0</span>
-</div>
-
-<!-- last updated -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-arrow-rotate-right fa-flip-horizontal"></i>
-    <span class="label">0</span>
-</div>
-
-
-</div>
-</article>
-<article class="repo flex">
-<div class="flex">
-        <i class="custom-i fa-solid fa-code-branch"></i>
-        <span class="label">40 repositories</span>
-</div>
-<p class="text">No description available</p>
-<div class="skills flex">
-<!-- programming language -->
-    <div class="skill flex">
- <i class="custom-i fa-solid fa-circle"></i>   
- <span class="label">JavaSecript</span>
-</div>
-
-<!-- stars -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-star"></i>   
-<span class="label">2</span>
-</div>
-
-<!-- branch -->
-<div class="skill flex">
-    <i class="custom-i fa-solid fa-code-fork"></i>
-<span class="label">0</span>
-</div>
-
-<!-- last updated -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-arrow-rotate-right fa-flip-horizontal"></i>
-    <span class="label">0</span>
-</div>
-
-
-</div>
-</article>
-    
-<article class="repo flex">
-<div class="flex">
-        <i class="custom-i fa-solid fa-code-branch"></i>
-        <span class="label">40 repositories</span>
-</div>
-<p class="text">No description available</p>
-<div class="skills flex">
-<!-- programming language -->
-    <div class="skill flex">
- <i class="custom-i fa-solid fa-circle"></i>   
- <span class="label">JavaSecript</span>
-</div>
-
-<!-- stars -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-star"></i>   
-<span class="label">2</span>
-</div>
-
-<!-- branch -->
-<div class="skill flex">
-    <i class="custom-i fa-solid fa-code-fork"></i>
-<span class="label">0</span>
-</div>
-
-<!-- last updated -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-arrow-rotate-right fa-flip-horizontal"></i>
-    <span class="label">0</span>
-</div>
-
-
-</div>
-</article>
-    
-<article class="repo flex">
-<div class="flex">
-        <i class="custom-i fa-solid fa-code-branch"></i>
-        <span class="label">40 repositories</span>
-</div>
-<p class="text">No description available</p>
-<div class="skills flex">
-<!-- programming language -->
-<div class="skill flex">
- <i class="custom-i fa-solid fa-circle"></i>   
- <span class="label">JavaSecript</span>
-</div>
-
-<!-- stars -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-star"></i>   
-<span class="label">2</span>
-</div>
-
-<!-- branch -->
-<div class="skill flex">
-    <i class="custom-i fa-solid fa-code-fork"></i>
-<span class="label">0</span>
-</div>
-
-<!-- last updated -->
-<div class="skill flex">
-<i class="custom-i fa-solid fa-arrow-rotate-right fa-flip-horizontal"></i>
-    <span class="label">0</span>
-</div>
-</div>
-</article>
-    
-</section>
 </section>
      </section>
      </main>
-     <!-- end main -->
-     
      </div>
-     <!-- end continer -->
 </body>
 </html>
